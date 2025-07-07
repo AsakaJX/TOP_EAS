@@ -1,0 +1,138 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-dark: oklch(0.1 0.02 308);
+  --bg: oklch(0.15 0.02 308);
+  --bg-light: oklch(0.2 0.02 308);
+  --text: oklch(0.96 0.04 308);
+  --text-muted: oklch(0.76 0.04 308);
+  --highlight: oklch(0.5 0.04 308);
+  --border: oklch(0.4 0.04 308);
+  --border-muted: oklch(0.3 0.04 308);
+  --primary: oklch(0.76 0.1 308);
+  --secondary: oklch(0.76 0.13 308);
+  --danger: oklch(0.7 0.05 30);
+  --warning: oklch(0.7 0.05 100);
+  --success: oklch(0.7 0.05 160);
+  --info: oklch(0.7 0.05 260);
+
+  color: var(--text);
+  font-family: 'Figtree', monospace;
+  font-size: 12px;
+}
+
+/* MAIN CONTAINERS */
+
+body {
+  background-color: var(--bg);
+
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+
+  background-color: var(--bg-light);
+  border-bottom: 1px solid var(--border);
+}
+
+.main {
+  display: flex;
+  /* flex: 1 1 auto; */
+  overflow: auto;
+  margin: 25px auto;
+  padding: 25px;
+  gap: 25px;
+}
+
+.footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 5px;
+
+  background-color: var(--bg-light);
+  border-top: 1px solid var(--border);
+}
+
+/* MENU */
+
+.menu {
+  /* display: flex; */
+  /* align-self: center; */
+  list-style: none;
+}
+
+.menu li * {
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.menu li {
+  text-decoration: none;
+  margin-top: 5px;
+}
+
+.menu li button {
+  padding: 10px;
+  width: 100%;
+
+  background-color: var(--primary);
+  border: 2px solid var(--border-muted);
+  border-radius: 5px;
+  color: var(--bg);
+
+  -webkit-transition: width 150ms linear;
+  -ms-transition: width 150ms linear;
+  transition: width 150ms linear;
+}
+
+.menu li button:hover {
+  background-color: var(--secondary);
+  border: 2px solid var(--highlight);
+  width: 105%;
+}
+
+.menu .size {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.menu .size #control {
+}
+
+/* CANVAS */
+
+#canvas {
+  display: flex;
+  /* overflow: auto; */
+  flex-wrap: wrap;
+
+  /* margin: auto 0; */
+  justify-content: flex-start;
+  flex: 1 1 auto;
+
+  width: 700px;
+  height: 700px;
+
+  /* max-width: 1000px;
+  max-height: 1000px; */
+
+  background-color: var(--bg-light);
+}
