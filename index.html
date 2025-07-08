@@ -22,13 +22,13 @@
       <ul class="menu">
         <li id="color">
           Color
-          <div id="current-color"></div>
+          <input type="color" id="current-color"></input>
         </li>
-        <li id="brush"><button>Brush</button></li>
-        <li id="eraser"><button>Eraser</button></li>
-        <li id="shade"><button>Shade</button></li>
-        <li id="highlight"><button>Highlight</button></li>
-        <li id="rainbow"><button>Rainbow mode!</button></li>
+        <li class="tool" id="brush"><button>Brush</button></li>
+        <li class="tool" id="eraser"><button>Eraser</button></li>
+        <li class="tool" id="shade"><button>Shade</button></li>
+        <li class="tool" id="highlight"><button>Highlight</button></li>
+        <li class="tool" id="rainbow"><button>Rainbow mode!</button></li>
         <li id="clear"><button>Clear</button></li>
         <li class="size">
           <label for="control">Size</label>
@@ -41,7 +41,7 @@
             value="16" />
         </li>
       </ul>
-      <div id="canvas"></div>
+      <div draggable="false" id="canvas"></div>
     </div>
     <div class="footer">
       <p>
